@@ -1,0 +1,1 @@
+create table company(companyId int primary key not null,companyName nvarchar(50) not null);select * from companycreate table department(	dept int primary key identity(1,1),	deptname nvarchar(50))                           
