@@ -1,0 +1,42 @@
+package tw.hibernateDemo.action;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+
+import tw.hibernateDemo.model.Instructor;
+import tw.hibernateDemo.model.InstructorDetail;
+import tw.hibernateDemo.util.HibernateUtil;
+
+public class DemoOneToOneInstructorActionEx1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		SessionFactory factory = HibernateUtil.getFactory();
+		Session session = factory.getCurrentSession();
+		
+		try {
+			session.beginTransaction();
+			Instructor instructor = new Instructor();
+			instructor.setName("Jerry");
+			
+			InstructorDetail instructorDetail = new InstructorDetail();
+			instructorDetail.setEmail("1111@gmail.com");
+			instructorDetail.setPhone("33564");
+			instructor.setInIinstructorDetail(instructorDetail);
+			
+			session.save(instructor);
+			
+			session.getTransaction().commit();
+			
+			
+			
+		} catch (Exception e) {
+			session.getTransaction().rollback();
+			e.printStackTrace();
+			// TODO: handle exception
+		}finally {
+			HibernateUtil.closeSessionFactory();
+		}
+	}
+
+}

@@ -1,0 +1,5 @@
+package tw.hibernateDemo.util;
+
+public class HibernateUtil {
+
+}

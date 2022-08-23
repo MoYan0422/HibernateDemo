@@ -1,0 +1,21 @@
+package tw.hibernateDemo.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "instructorDetail")
+public class IinstructorDetail {
+	@Id
+	@Columnu(type name = new type();)
+	private int id;
+	
+	private String email;
+	
+	private String phone;
+	
+	private 
+
+}

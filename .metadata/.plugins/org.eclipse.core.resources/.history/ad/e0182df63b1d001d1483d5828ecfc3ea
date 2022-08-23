@@ -1,0 +1,24 @@
+package tw.hibernateDemo.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "Friend")
+public class Friend {
+	@Id
+	@Column(name = "friends_id")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer friendId;
+	@Column(name = "friendName")
+	private String friendName;
+
+	public Friend() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

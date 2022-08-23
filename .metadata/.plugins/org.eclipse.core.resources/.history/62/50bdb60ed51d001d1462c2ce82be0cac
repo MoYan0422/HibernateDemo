@@ -1,0 +1,67 @@
+package tw.hibernateDemo.action;
+
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
+
+import tw.hibernateDemo.model.Employee;
+import tw.hibernateDemo.util.HibernateUtil;
+
+public class DemoHQLEx1 {
+	
+	public void queryEmployee() {
+		SessionFactory factory = HibernateUtil.getFactory();
+		Session session = factory.getCurrentSession();
+		
+		try {
+			session.beginTransaction();
+			
+			Query<Employee> query = session.createQuery("from Employee",Employee.class);
+			List<Employee> employees = query.getResultList();
+			for (Employee employee : employees) {
+				System.out.println(employee.toString());
+				
+			}
+			session.getTransaction().commit();
+			
+		} catch (Exception e) {
+			System.out.println("rollback");
+			session.getTransaction().rollback();
+			// TODO: handle exception
+		}finally {
+			HibernateUtil.closeSessionFactory();
+		}
+	}
+	
+	public void queryEmployeeBySalary() {
+		SessionFactory factory = HibernateUtil.getFactory();
+		Session session = factory.getCurrentSession();
+		
+		try {
+			session.beginTransaction();
+			
+			Query<Employee> query = session.createQuery("from Employee where salary > 3000 and vacation>10",Employee.class);
+			List<Employee> employees = query.getResultList();
+			for (Employee employee : employees) {
+				System.out.println(employee.toString());
+				
+			}
+			session.getTransaction().commit();
+			
+		} catch (Exception e) {
+			System.out.println("rollback");
+			session.getTransaction().rollback();
+			// TODO: handle exception
+		}finally {
+			HibernateUtil.closeSessionFactory();
+		}
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		DemoHQLEx1 demoHQLEx1 = new DemoHQLEx1();
+		demoHQLEx1.queryEmployee();
+	}
+
+}

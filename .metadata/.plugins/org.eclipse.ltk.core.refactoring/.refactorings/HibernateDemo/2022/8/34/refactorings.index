@@ -1,0 +1,105 @@
+1660533676701	Move file
+1660534793466	Delete element
+1660534868792	Extract local variable 'build'
+1660534955551	Extract local variable 'buildSessionFactory'
+1660535002226	Extract local variable 'openSession'
+1660535072816	Extract local variable 'com1'
+1660536061762	Extract local variable 'build'
+1660536132323	Extract local variable 'buildSessionFactory'
+1660536171810	Extract local variable 'openSession'
+1660536263204	Extract local variable 'company'
+1660536319142	Extract local variable 'save'
+1660542864869	Delete element
+1660543544911	Extract local variable 'build'
+1660543615890	Extract local variable 'buildSessionFactory'
+1660543642320	Extract local variable 'session'
+1660543709084	Extract local variable 'department'
+1660543925292	Move compilation unit
+1660545641012	Delete element
+1660545707580	Extract local variable 'factory'
+1660545721135	Extract local variable 'openSession'
+1660545763167	Extract local variable 'department'
+1660546571164	Extract local variable 'factory'
+1660546594283	Extract local variable 'currentSession'
+1660546673890	Extract local variable 'department'
+1660547372188	Extract local variable 'factory'
+1660547395565	Extract local variable 'session'
+1660547691600	Extract local variable 'department'
+1660548447167	Delete element
+1660548496526	Extract local variable 'factory'
+1660548523303	Extract local variable 'session'
+1660548568492	Extract local variable 'department'
+1660550995743	Delete element
+1660551471073	Extract local variable 'companyBean'
+1660551802144	Extract local variable 'createQuery'
+1660552417012	Extract local variable 'factory'
+1660552438468	Extract local variable 'currentSession'
+1660552542477	Extract local variable 'companyDao'
+1660552584865	Extract local variable 'companyBean'
+1660552619210	Extract local variable 'insert'
+1660552964933	Extract local variable 'select'
+1660553333787	Extract local variable 'selectAll'
+1660553407047	Extract local variable 'deleteOne'
+1660614970554	Extract local variable 'companyDao2'
+1660615058265	Extract local variable 'select'
+1660615103305	Extract local variable 'selectAll'
+1660615533884	Extract local variable 'insert'
+1660615616976	Extract local variable 'theCom'
+1660615950822	Extract local variable 'factory'
+1660615972058	Extract local variable 'currentSession'
+1660616156904	Extract local variable 'companyService'
+1660616186387	Extract local variable 'select'
+1660619456275	Rename compilation unit 'IinstructorDetail.java'
+1660619510569	Extract local variable 'factory'
+1660619521328	Extract local variable 'currentSession'
+1660619613357	Extract local variable 'instructorDetail'
+1660619745861	Extract local variable 'instructor'
+1660620609942	Copy compilation unit
+1660620725829	Extract local variable 'instructor'
+1660620846097	Extract local variable 'session2'
+1660620869383	Extract local variable 'instructor'
+1660620882264	Extract local variable 'instructorDetail'
+1660621937902	Extract local variable 'factory'
+1660621955994	Extract local variable 'currentSession'
+1660622119298	Extract local variable 'instructorDetail'
+1660622141007	Extract local variable 'instructor'
+1660628156598	Copy compilation unit
+1660628441119	Copy compilation unit
+1660628535164	Extract local variable 'instructor'
+1660628561799	Extract local variable 'instructorDetail'
+1660629011330	Copy compilation unit
+1660632417342	Extract local variable 'factory'
+1660632431408	Extract local variable 'currentSession'
+1660632550249	Extract local variable 'bookUsers'
+1660632608397	Extract local variable 'books'
+1660632708228	Rename local variable 'books'
+1660632967197	Extract local variable 'bookSet'
+1660633618340	Copy compilation unit
+1660633667024	Extract local variable 'bookUsers'
+1660633692366	Extract local variable 'books'
+1660634237249	Copy compilation unit
+1660634304040	Extract local variable 'bookUsers'
+1660634314320	Extract local variable 'books'
+1660638775351	Copy compilation unit
+1660638782500	Delete element
+1660638851309	Copy compilation unit
+1660638969202	Extract local variable 'myGroup'
+1660638982750	Extract local variable 'friends'
+1660639315400	Extract local variable 'iterator'
+1660639468831	Extract local variable 'next'
+1660639864132	Extract local variable 'friend'
+1660640419718	Copy compilation unit
+1660640499608	Extract local variable 'friend'
+1660640525181	Extract local variable 'myGroups'
+1660640551039	Extract local variable 'iterator'
+1660640570848	Extract local variable 'next'
+1660702561033	Extract local variable 'factory'
+1660702598634	Extract local variable 'session'
+1660702747953	Extract local variable 'createQuery'
+1660702831828	Extract local variable 'resultList'
+1660702899708	Extract local variable 'demoHQLEx1'
+1660714802131	Copy package
+1660714826937	Copy package
+1660714863368	Copy package
+1660714892676	Copy file
+1660723530801	Copy compilation unit

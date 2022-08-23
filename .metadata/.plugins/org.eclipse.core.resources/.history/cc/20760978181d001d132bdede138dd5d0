@@ -1,0 +1,43 @@
+package tw.hibernateDemo.action;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+
+import tw.hibernateDemo.model.Instructor;
+import tw.hibernateDemo.model.InstructorDetail;
+import tw.hibernateDemo.util.HibernateUtil;
+
+public class DemoOneToOneInstructorActionEx3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		SessionFactory factory = HibernateUtil.getFactory();
+		Session session = factory.getCurrentSession();
+//		try {
+//			session.beginTransaction();
+//			InstructorDetail instructorDetail = session.get(InstructorDetail.class, 101);
+//			if(instructorDetail!=null) {
+//				System.out.println("以進入");
+//				System.out.println(instructorDetail.getEmail());
+//			Instructor instructor = instructorDetail.getInstructor();
+//			System.out.println("name:"+instructor.getName());
+//				
+//			}else {
+//				System.out.println("查無資料");
+//			}
+//			
+//			
+//			
+//			session.getTransaction().commit();;
+//		} catch (Exception e) {
+//			
+//			System.out.println("rollback");
+//			session.getTransaction().rollback();
+//			// TODO: handle exception
+//		}finally {
+//			HibernateUtil.closeSessionFactory();
+//		}
+		
+	}
+
+}

@@ -1,0 +1,53 @@
+package tw.hibernateDemo.action;
+
+import java.util.LinkedHashSet;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+
+import tw.hibernateDemo.model.BookUsers;
+import tw.hibernateDemo.model.Books;
+import tw.hibernateDemo.util.HibernateUtil;
+
+public class DemoBookOneToManyEx1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		SessionFactory factory = HibernateUtil.getFactory();
+		Session session = factory.getCurrentSession();
+		try {
+			session.beginTransaction();
+			BookUsers bookUsers = new BookUsers();
+			bookUsers.setUserName("阿偉");
+			Books books1 = new Books();
+			books1.setBooktitle("java入門到放棄");
+			books1.setPublicYear("2016-1");
+			
+			Books books2 = new Books();
+			books2.setBooktitle("java從放棄到絕望");
+			books2.setPublicYear("2017-1");
+			//書設定使用者
+			books1.setBookUsers(bookUsers);
+			books2.setBookUsers(bookUsers);
+			//
+			LinkedHashSet<Books> bookSet = new LinkedHashSet<Books>();
+			bookSet.add(books1);
+			bookSet.add(books2);
+			bookUsers.setBooks(bookSet);
+			
+			session.save(bookUsers);
+			
+			
+			session.getTransaction().commit();
+		} catch (Exception e) {
+			// TODO: handle exception
+			session.getTransaction().rollback();
+			System.out.println("rollback");
+		}finally {
+			HibernateUtil.closeSessionFactory();
+		}
+		
+
+	}
+
+}

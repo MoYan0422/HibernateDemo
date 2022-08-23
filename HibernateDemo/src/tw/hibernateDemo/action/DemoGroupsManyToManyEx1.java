@@ -1,0 +1,51 @@
+package tw.hibernateDemo.action;
+
+import java.util.Iterator;
+import java.util.Set;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+
+import tw.hibernateDemo.model.Friend;
+import tw.hibernateDemo.model.MyGroup;
+import tw.hibernateDemo.util.HibernateUtil;
+
+public class DemoGroupsManyToManyEx1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		SessionFactory factory = HibernateUtil.getFactory();
+		Session session = factory.getCurrentSession();
+		try {
+			session.beginTransaction();
+			MyGroup myGroup = session.get(MyGroup.class,3);
+			Set<Friend> friends = myGroup.getFriends();
+			Iterator<Friend> iterator = friends.iterator();
+			while(iterator.hasNext()) {
+				Friend friend = iterator.next();
+				
+				if (friend.getFriendName().equals("Tina")) {
+					iterator.remove();
+				}
+			}
+			session.flush();
+			Friend bill = new Friend();
+			bill.setFriendName("bill");
+			session.save(bill);
+			friends.add(bill);
+			
+			
+			
+			session.getTransaction().commit();
+		} catch (Exception e) {
+			// TODO: handle exception
+			session.getTransaction().rollback();
+			System.out.println("rollback");
+		}finally {
+			HibernateUtil.closeSessionFactory();
+		}
+		
+
+	}
+
+}

@@ -1,0 +1,39 @@
+package tw.hibernateDemo.action;
+
+import java.util.LinkedHashSet;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+
+import tw.hibernateDemo.model.BookUsers;
+import tw.hibernateDemo.model.Books;
+import tw.hibernateDemo.util.HibernateUtil;
+
+public class DemoBookOneToManyEx2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		SessionFactory factory = HibernateUtil.getFactory();
+		Session session = factory.getCurrentSession();
+		try {
+			session.beginTransaction();
+			BookUsers bookUsers = session.get(BookUsers.class, 1);
+			Books books = session.get(Books.class, 2);
+			bookUsers.getBooks().remove(books);
+			session.delete(books);
+			
+			session.save(bookUsers);
+			
+			session.getTransaction().commit();
+		} catch (Exception e) {
+			// TODO: handle exception
+			session.getTransaction().rollback();
+			System.out.println("rollback");
+		}finally {
+			HibernateUtil.closeSessionFactory();
+		}
+		
+
+	}
+
+}

@@ -1,0 +1,38 @@
+package tw.hibernateDemo.action;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+
+import tw.hibernateDemo.model.Instructor;
+import tw.hibernateDemo.model.InstructorDetail;
+import tw.hibernateDemo.util.HibernateUtil;
+
+public class DemoOneToOneInstructorActionEx2 {
+
+	public static void main(String[] args) {
+		SessionFactory factory = HibernateUtil.getFactory();
+		Session session = factory.getCurrentSession();
+		
+		
+		try {
+			session.beginTransaction();
+			Instructor instructor = session.get(Instructor.class,1);
+			
+			InstructorDetail instructorDetail = instructor.getInstructorDetail();
+			System.out.println("email:"+instructorDetail.getEmail());
+			System.out.println("phone:"+instructorDetail.getPhone());
+			
+			
+			session.getTransaction().commit();
+		}catch(Exception e) {
+			System.out.println("ROLLBACK!!");
+			session.getTransaction().rollback();
+			e.printStackTrace();
+			
+		}finally {
+			HibernateUtil.closeSessionFactory();
+		}
+
+	}
+
+}

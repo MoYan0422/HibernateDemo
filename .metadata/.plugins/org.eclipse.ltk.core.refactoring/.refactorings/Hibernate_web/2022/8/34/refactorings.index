@@ -1,0 +1,18 @@
+1660716810220	Move package
+1660716811870	Move package
+1660716821154	Move file
+1660716907258	Delete element
+1660717725412	Extract local variable 'factory'
+1660719910772	Extract local variable 'session'
+1660720150528	Extract local variable 'query'
+1660720242935	Extract local variable 'singleResult'
+1660720581419	Extract local variable 'myMemberDao'
+1660720725827	Extract local variable 'member'
+1660721365905	Extract local variable 'hashMap'
+1660721487227	Extract local variable 'httpSession'
+1660721533597	Extract local variable 'userName'
+1660721554978	Extract local variable 'parameter'
+1660721626770	Extract local variable 'myMemberService'
+1660721654493	Extract local variable 'chackLogin'
+1660722000103	Extract local variable 'requestDispatcher'
+1660723724690	Move 'loginOK.jsp' to 'webapp'

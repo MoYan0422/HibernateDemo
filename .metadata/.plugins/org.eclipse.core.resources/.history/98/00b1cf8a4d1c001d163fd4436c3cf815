@@ -1,0 +1,33 @@
+package tw.hibernateDemo.model;
+
+public class CompanyBean {
+	private Integer companyID;
+	private String companyName;
+
+	public CompanyBean() {
+
+	}
+
+	public CompanyBean(Integer companyID, String companyName) {
+		super();
+		this.companyID = companyID;
+		this.companyName = companyName;
+	}
+
+	public Integer getCompanyID() {
+		return companyID;
+	}
+
+	public void setCompanyID(Integer companyID) {
+		this.companyID = companyID;
+	}
+
+	public String getCompanyName() {
+		return companyName;
+	}
+
+	public void setCompanyName(String companyName) {
+		this.companyName = companyName;
+	}
+
+}

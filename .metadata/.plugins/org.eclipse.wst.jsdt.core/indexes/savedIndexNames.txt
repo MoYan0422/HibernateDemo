@@ -1,0 +1,8 @@
+INDEX VERSION 1.4+C:\Users\User\Dropbox\Hibernate\workspace\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+4191177805.index
+3570243016.index
+1060405299.index
+1416712992.index
+2974969495.index
+2024731655.index
+2244486419.index

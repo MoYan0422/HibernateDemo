@@ -1,0 +1,15 @@
+package tw.hibernateDemo.model;
+
+import org.hibernate.SessionFactory;
+
+import tw.hibernateDemo.util.HibernateUtil;
+
+public class MyMemberDao {
+
+	private SessionFactory factory;
+	
+	public MyMemberDao() {
+		this.factory=HibernateUtil.getFactory()
+	}
+
+}

@@ -1,0 +1,48 @@
+package tw.hibernateDemo.service;
+
+import java.util.List;
+
+import org.hibernate.Session;
+
+import tw.hibernateDemo.model.CompanyBean;
+import tw.hibernateDemo.model.CompanyDao;
+
+public class CompanyService implements CompanyServiceInterface {
+	
+	private CompanyDao companyDao;
+	
+	public CompanyService(Session session) {
+		this.companyDao = new CompanyDao(session);
+	}
+
+	@Override
+	public CompanyBean select(Integer id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<CompanyBean> selectAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public CompanyBean insert(CompanyBean companyBean) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public CompanyBean updateOne(Integer id, String comName) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean deleteOne(Integer id) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

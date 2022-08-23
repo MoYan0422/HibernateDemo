@@ -1,0 +1,31 @@
+package tw.hibernateDemo.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "Employee")
+public class Employee {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer id ;
+	
+	@Column(name = "employee_name")
+	private String employeeName ;
+	
+	@Column(name = "salary")
+	private Integer salary;
+	
+	@Column(name = "vacation")
+	private Integer vacation;
+	
+
+	public Employee() {
+		// TODO Auto-generated constructor stu
+	}
+
+}

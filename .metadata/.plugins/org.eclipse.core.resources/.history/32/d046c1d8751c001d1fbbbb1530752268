@@ -1,0 +1,32 @@
+package tw.hibernateDemo.action;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+
+import tw.hibernateDemo.model.CompanyBean;
+import tw.hibernateDemo.model.CompanyDao;
+import tw.hibernateDemo.util.HibernateUtil;
+
+public class DemoCompanyDaoActionEx1 {
+	public static void main(String[] agrs) {
+		SessionFactory factory = HibernateUtil.getFactory();
+		Session session = factory.getCurrentSession();
+		try {
+			session.beginTransaction();
+			CompanyDao companyDao = new CompanyDao(session);
+			CompanyBean companyBean = new CompanyBean(1003,"Tik Tok");
+			companyDao.insert(companyBean);
+			
+			
+			
+		} catch (Exception e) {
+			session.getTransaction().rollback();
+			e.printStackTrace();
+			// TODO: handle exception
+		}finally {
+			HibernateUtil.closeSessionFactory();
+		}
+		
+	}
+
+}

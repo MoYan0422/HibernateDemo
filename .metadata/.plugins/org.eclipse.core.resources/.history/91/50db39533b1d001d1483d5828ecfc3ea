@@ -1,0 +1,9 @@
+package tw.hibernateDemo.model;
+
+public class MyGroup {
+
+	public MyGroup() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

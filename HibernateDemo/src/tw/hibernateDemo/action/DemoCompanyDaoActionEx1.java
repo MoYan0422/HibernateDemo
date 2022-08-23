@@ -1,0 +1,57 @@
+package tw.hibernateDemo.action;
+
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+
+import tw.hibernateDemo.model.CompanyBean;
+import tw.hibernateDemo.model.CompanyDao;
+import tw.hibernateDemo.util.HibernateUtil;
+
+public class DemoCompanyDaoActionEx1 {
+	public static void main(String[] agrs) {
+		SessionFactory factory = HibernateUtil.getFactory();
+		Session session = factory.getCurrentSession();
+		try {
+			session.beginTransaction();
+			CompanyDao companyDao = new CompanyDao(session);
+			
+			
+//			新增
+//			CompanyBean companyBean = new CompanyBean(1005,"Tik Tok");
+//			companyDao.insert(companyBean);
+			
+//			查詢
+//			CompanyBean com2 = companyDao.select(1002);
+//			if (com2!=null) {
+//				System.out.println(com2.getCompanyID()+":"+com2.getCompanyName());
+//			}else {
+//				System.out.println("無該筆資料");
+//			}
+//			測試修改
+//			companyDao.updateOne(1002, "Alfabet");
+			List<CompanyBean> selectAll = companyDao.selectAll();
+			for (CompanyBean companyBean : selectAll) {
+				System.out.println(companyBean.getCompanyID()+":"+companyBean.getCompanyName());
+			}
+			
+			boolean result = companyDao.deleteOne(1005);
+			if (result) {
+				System.out.println("刪除成功");
+			} else {
+				System.out.println("刪除失敗，無該筆資料");
+			}
+			session.getTransaction().commit();
+			
+		} catch (Exception e) {
+			session.getTransaction().rollback();
+			e.printStackTrace();
+			// TODO: handle exception
+		}finally {
+			HibernateUtil.closeSessionFactory();
+		}
+		
+	}
+
+}

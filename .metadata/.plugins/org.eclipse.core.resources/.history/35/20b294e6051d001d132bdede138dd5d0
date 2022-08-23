@@ -1,0 +1,5 @@
+package tw.hibernateDemo.service;
+
+public class CompanyServiceInterface {
+
+}

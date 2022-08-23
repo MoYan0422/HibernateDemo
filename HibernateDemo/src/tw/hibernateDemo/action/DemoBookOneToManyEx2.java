@@ -1,0 +1,34 @@
+package tw.hibernateDemo.action;
+
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+
+import tw.hibernateDemo.model.Books;
+import tw.hibernateDemo.util.HibernateUtil;
+
+public class DemoBookOneToManyEx2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		SessionFactory factory = HibernateUtil.getFactory();
+		Session session = factory.getCurrentSession();
+		try {
+			session.beginTransaction();
+			Books books = session.get(Books.class, 2);
+			//若多方也有設定cascade連動,則需以下這行
+			books.setBookUsers(null);
+			session.delete(books);
+			session.getTransaction().commit();
+		} catch (Exception e) {
+			// TODO: handle exception
+			session.getTransaction().rollback();
+			System.out.println("rollback");
+		}finally {
+			HibernateUtil.closeSessionFactory();
+		}
+		
+
+	}
+
+}

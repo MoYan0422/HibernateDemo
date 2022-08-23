@@ -1,0 +1,14 @@
+127.0.0.1 - - [17/Aug/2022:16:07:24 +0800] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [17/Aug/2022:16:07:24 +0800] "GET /Hibernate_web/checkLogin HTTP/1.1" 405 751
+0:0:0:0:0:0:0:1 - - [17/Aug/2022:16:07:24 +0800] "GET /favicon.ico HTTP/1.1" 404 762
+127.0.0.1 - - [17/Aug/2022:16:08:57 +0800] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [17/Aug/2022:16:08:59 +0800] "GET /Hibernate_web/ligin.jsp HTTP/1.1" 200 537
+0:0:0:0:0:0:0:1 - - [17/Aug/2022:16:09:17 +0800] "POST /Hibernate_web/checkLogin HTTP/1.1" 404 739
+0:0:0:0:0:0:0:1 - - [17/Aug/2022:16:12:33 +0800] "GET /Hibernate_web/checkLogin HTTP/1.1" 405 751
+127.0.0.1 - - [17/Aug/2022:16:12:59 +0800] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [17/Aug/2022:16:13:00 +0800] "GET /Hibernate_web/ligin.jsp HTTP/1.1" 200 537
+0:0:0:0:0:0:0:1 - - [17/Aug/2022:16:13:08 +0800] "POST /Hibernate_web/checkLogin HTTP/1.1" 404 739
+127.0.0.1 - - [17/Aug/2022:16:15:17 +0800] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [17/Aug/2022:16:15:18 +0800] "GET /Hibernate_web/ligin.jsp HTTP/1.1" 200 537
+0:0:0:0:0:0:0:1 - - [17/Aug/2022:16:15:26 +0800] "POST /Hibernate_web/checkLogin HTTP/1.1" 200 324
+0:0:0:0:0:0:0:1 - - [17/Aug/2022:16:15:36 +0800] "POST /Hibernate_web/checkLogin HTTP/1.1" 200 573

@@ -1,0 +1,9 @@
+package tw.hibernateDemo.service;
+
+public class MyMemberService {
+
+	public MyMemberService() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

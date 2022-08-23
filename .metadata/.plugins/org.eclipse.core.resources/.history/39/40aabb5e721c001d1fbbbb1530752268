@@ -1,0 +1,5 @@
+package tw.hibernateDemo.model;
+
+public interface CompanyDAOinterface {
+	public CompanyBean insert(CompanyBean comBean)
+}
